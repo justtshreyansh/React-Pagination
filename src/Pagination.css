@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.pagination-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1rem;
+  color: #2c3e50;
+  user-select: none;
+  padding: 0.5rem 1rem;
+  font-weight: 400;
+}
+
+.column {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 400px;
+}
+
+.column button {
+  background-color: #007bff;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 90px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+}
+
+.column button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.column button:not(:disabled):hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 12px rgba(0, 86, 179, 0.6);
+}
+
+.pagination-wrapper p {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #34495e;
+}
+
+@media (max-width: 480px) {
+  .column {
+    flex-direction: column;
+  }
+
+  .column button {
+    width: 100%;
+    min-width: auto;
+  }
+}
