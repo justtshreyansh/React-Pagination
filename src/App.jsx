@@ -3,6 +3,7 @@ import DisplayData from "./DisplayData";
 import SortButton from "./SortButton";
 import Search from "./Search";
 import Pagination from "./Pagination";
+import Loader from "./Loader";
 
 function App() {
   const [originalData, setOriginalData] = useState([]); // full fetched data
@@ -39,7 +40,7 @@ function App() {
   return (
     <>
       {loading ? (
-        <>loading</>
+        <><Loader/></>
       ) : (
         <>
           <Search originalData={originalData} setData={setData} />
